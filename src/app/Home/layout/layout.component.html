@@ -1,0 +1,244 @@
+<div class="Bar">
+  <div class="navBar">
+    <div class="logo">
+      <!-- <img  class=" img"src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Finventory-management_7527289&psig=AOvVaw2znhz3Kyab2OvZW8PqKsJ6&ust=1727546594791000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKilg9va44gDFQAAAAAdAAAAABAE" alt=""> -->
+      <h3 class="glow">INVENTORY</h3>
+    </div>
+    <i class="fa-solid fa-user accounts"></i>
+    <p routerLink="accountdetails">Accounts</p>
+  </div>
+  <div class="sidebarParent">
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header class="Menu">Menu</header>
+        <a routerLink="dashboard" class="active">
+            <i class="fas fa-qrcode"></i>
+            <span>Dashboard</span>
+        </a>
+        <a routerLink="newpurchase">
+            <i class="fas fa-link"></i>
+            <span>New Purchase</span>
+        </a>
+        <a routerLink="newsale">
+            <i class="fas fa-stream"></i>
+            <span>New Sale</span>
+        </a>
+        <a routerLink="productcatagory">
+            <i class="fas fa-calendar"></i>
+            <span>Products</span>
+        </a>
+        <a routerLink="salelist">
+            <i class="far fa-question-circle"></i>
+            <span>Sales List</span>
+        </a>
+        <a routerLink="purchaselist">
+            <i class="fas fa-sliders-h"></i>
+            <span>Purchase List</span>
+        </a>
+        <a routerLink="stockdetails">
+            <i class="fas fa-sliders-h"></i>
+            <span>Products List</span>
+        </a>
+        <a routerLink="accountdetails">
+            <i class="far fa-envelope"></i>
+            <span>About</span>
+        </a>
+    </div>
+  </div>
+
+</div>
+<span class="quote">Streamline your inventory, maximize your efficiency - Manage with precision, every time.</span>
+<div class="homeContainer ">
+    <div class="dashboard homeCard">
+        <a routerLink="dashboard">Dashboard</a>
+        <div class="box1">
+          <div class="smallicon1"><i class="fa-solid fa-gift icon"></i></div>
+          <p class="icontext" >
+          {{totalInventory}}
+          <br>
+          Total items available
+          </p>
+          
+          <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>          
+        <div class="box1">
+          <div class="smallicon2"><i class="fa-solid fa-truck icon"></i></div>
+          <p class="icontext">
+            {{totalProducts}}
+            <br>
+            Total Product available
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="box1">
+          <div class="smallicon3"><i class="fa-solid fa-box icon"></i></div>
+          <p class="icontext" >
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="box1">
+          <div class="smallicon4"><i class="fa-regular fa-file icon"></i></div>
+          <p class="icontext"> 
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="inventorySummary">
+          <h6>Inventory Summary(In Quantity)</h6>
+            <div class="box1 boxsummary">
+              <p>in hand</p>
+              <p class="ps">to be recive</p>  
+            </div>
+          
+        </div>
+    </div>
+    <div class="newPurchase homeCard">
+      <a routerLink="newpurchase">New Purchase</a>
+      <div class="box1">
+          <div class="smallicon1"><i class="fa-solid fa-gift icon"></i></div>
+          <p class="icontext" >
+          {{totalpurchase}}
+          <br>
+          Total purchase
+          </p>
+          
+          <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+          
+        <div class="box1">
+          <div class="smallicon2"><i class="fa-solid fa-truck icon"></i></div>
+          <p class="icontext">
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="box1">
+          <div class="smallicon3"><i class="fa-solid fa-box icon"></i></div>
+          <p class="icontext" >
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="box1">
+          <div class="smallicon4"><i class="fa-regular fa-file icon"></i></div>
+          <p class="icontext"> 
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="inventorySummary">
+          <h6>Inventory Summary(In Quantity)</h6>
+            <div class="box1 boxsummary">
+              <p>in hand</p>
+              <p class="ps">to be recive</p>  
+            </div>
+          
+        </div>
+    </div>
+    <div class="newSale homeCard">
+        <a routerLink="newsale">New Sale</a>
+        <div class="box1">
+          <div class="smallicon1"><i class="fa-solid fa-gift icon"></i></div>
+          <p class="icontext" >
+          {{totalSale}}
+          <br>
+          Total product sold
+          </p>
+          
+          <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+          
+        <div class="box1">
+          <div class="smallicon2"><i class="fa-solid fa-truck icon"></i></div>
+          <p class="icontext">
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="box1">
+          <div class="smallicon3"><i class="fa-solid fa-box icon"></i></div>
+          <p class="icontext" >
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="box1">
+          <div class="smallicon4"><i class="fa-regular fa-file icon"></i></div>
+          <p class="icontext"> 
+            0
+            <br>
+            Quantity to be Packed
+            </p>
+            <i class="fa-thin fa-greater-than greaterthan"></i>
+        </div>
+        <div class="inventorySummary">
+          <h6>Inventory Summary(In Quantity)</h6>
+            <div class="box1 boxsummary">
+              <p>in hand</p>
+              <p class="ps">to be recive</p>  
+            </div>
+          
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar">
+    <ul class="navbar__menu">
+    <li class="navbar__item">
+        <a routerLink="dashboard"  class="navbar__link"><i class="fa-solid fa-house"></i><span >DASHBOARD</span></a>
+    </li>
+    <li class="navbar__item">
+        <a routerLink="newpurchase"  class="navbar__link"><i class="fa-solid fa-cart-shopping" ></i><span>NEW PURCHASE</span></a>        
+    </li>
+    <li class="navbar__item">
+        <a routerLink="newsale"  class="navbar__link"><i class="fa-solid fa-paperclip"></i><span>NEW SALE</span></a>        
+    </li>
+    <li class="navbar__item">
+        <a routerLink="productcatagory"   class="navbar__link"><i class="fa-solid fa-sliders"></i><span>PRODUCTS</span></a>        
+    </li>
+    <li class="navbar__item">
+        <a routerLink="purchaselist"  class="navbar__link"><i class="fa-solid fa-business-time"></i><span>PURCHASE LIST</span></a>        
+    </li>
+    <li class="navbar__item">
+        <a routerLink="salelist"  class="navbar__link"><i class="fa-solid fa-caret-up"></i><span>SALES LIST</span></a>        
+    </li>
+    <li class="navbar__item">
+        <a routerLink="stockdetails"  class="navbar__link"><i class="fa-solid fa-list"></i><span>STOCK </span></a>        
+    </li>
+    <li>
+        <a routerLink="accountdetails"  class="navbar__link"><i class="fa-solid fa-user"></i><span>ACCOUNT</span></a>
+    </li>
+
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,30 @@
+<div class="btnContainer">
+    <button class="purchaseButton" routerLink="/newpurchase">Make a new Purchase +</button>
+</div>
+<div class="cardHolder">
+    <div class="cardContainer">
+        <div class="card" *ngFor="let purchage of purchageList; let i = index">
+            <h5>No. {{i + 1}}</h5>
+            <h5>{{purchage.productName}}</h5>
+            <div class="cont">
+                <h5>{{purchage.supplierName}}</h5>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Quantity: {{purchage.quantity}}</h5>
+                <h5 class="card-text">Date: {{purchage.purchaseDate}}</h5>
+                <h5 class="card-text">Invs No: {{purchage.invoiceNo}}</h5>
+                <h5 class="card-title">Supplier Name: {{purchage.supplierName}} </h5>
+                <button class="card-button">Details</button>
+                <br><br>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<router-outlet></router-outlet>

@@ -1,0 +1,23 @@
+
+<!-- ths new one -->
+<div class="container">
+    <table class="table">
+      <thead>
+        <tr class="table-header">
+          <th class="header__item">Sr NO</th>
+          <th class="header__item">Product Name</th>
+          <th class="header__item">Product ID</th>
+          <th class="header__item">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-row" *ngFor="let stock of allStock; let i = index">
+          <td class="table-data">{{ i + 1 }}</td>
+          <td class="table-data">{{ stock.productname }}</td>
+          <td class="table-data">{{ stock.id}}</td>
+          <td class="table-data" [ngClass]="stock.quantity ==0 ||stock.quantity<0?'bg-danger': ''">{{ stock.quantity }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

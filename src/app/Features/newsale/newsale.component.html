@@ -1,0 +1,29 @@
+<div class="newsales">
+    <h3>Make a new sales</h3>
+    <div class="salesForm">
+        
+        <form #myForm="ngForm" (ngSubmit)="onBuy()">
+            <p>Enter the InvoiceNo</p><input class="invoiceNo" name="invoiceNo" [(ngModel)]="salesObj.invoiceNo" type="text" required>
+            <p>Enter the Sale Date</p><input name="purchaseDate" [(ngModel)]="salesObj.saleDate" type="date" required>
+            <p>Enter the ProductName</p>
+            <select [(ngModel)]="salesObj.productId" class="selectOption" name="product" id="" required>
+                <option [value]="product.id" *ngFor=" let product of productList">
+                    @if(product.quantity>0){
+                        {{product.productname}}
+                    }
+                </option>
+            </select>
+            <p>Enter the Customer name</p><input name="saupplierName" [(ngModel)]="salesObj.customerName" type="text" required>
+            <p>Enter the Mobile Number</p><input name="MobileNumber " [(ngModel)]="salesObj.mobileNo" type="text" required>
+            <p>Enter the Quantity</p><input name="quantity" [(ngModel)]="salesObj.quantity" type="number" required>
+            <p>Enter the Total Amount</p><input name="invoceAmount" [(ngModel)]="salesObj.totalAmount" type="number" required>
+            
+            <div class="btnSection">
+                <button class="btn" routerLink="/salelist">Go to List</button>
+                <button type="submit" class="btn"> Buy Item</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br>

@@ -1,0 +1,24 @@
+<div class="newpurchage">
+    <h3>Make a new Purchase</h3>
+    <div class="purchaseForm">
+        
+        <form action="">
+            <p>Enter the InvoiceNo</p><input class="invoiceNo" name="invoiceNo" [(ngModel)]="purchaseObj.invoiceNo" type="text">
+            <p>Enter the PurchaseDate</p><input name="purchaseDate" [(ngModel)]="purchaseObj.purchaseDate" type="date">
+            <p>Enter the ProductName</p>
+            <select [(ngModel)]="purchaseObj.productId" class="selectOption" name="product" id="" >
+                <option [value]="product.id" *ngFor=" let product of productList">{{product.productname}}</option>
+            </select>
+            <p>Enter the SupplierName</p><input name="saupplierName" [(ngModel)]="purchaseObj.supplierName" type="text">
+            <p>Enter the Quantity</p><input name="quantity" [(ngModel)]="purchaseObj.quantity" type="number">
+            <p>Enter the InvoceAmount</p><input name="invoceAmount" [(ngModel)]="purchaseObj.invoiceAmount" type="number">
+            
+        </form>
+        <div class="btnSection">
+            <button class="btn" routerLink="/purchaselist">Go to List</button>
+            <button class="btn" (click)="onSave()">Purchase Submit</button>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br>
+<router-outlet></router-outlet>

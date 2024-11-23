@@ -1,0 +1,23 @@
+<div class="btnContainer">
+    <button class="saleButton" routerLink="/newsale">Make a new sale +</button>
+</div>
+
+<div class="cardHolder">
+    <div class="cardContainer">
+        <div class="card" *ngFor="let sale of saleList; let i = index">
+            <h5>No. {{i + 1}}</h5>
+            <h5>{{sale.supplierName}}</h5>
+            <div class="card-body">
+                <h5 class="card-title">Quantity: {{sale.quantity}}</h5>
+                <h5 class="card-text">Mobile: {{sale.mobileNo}}</h5>
+                <h5 class="card-text">Product: {{sale.productName}}</h5>
+                <h5 class="card-text">Date: {{sale.saleDate}}</h5>
+                <h5 class="card-text">Invoice No: {{sale.invoiceNo}}</h5>
+                <button class="card-button">Details</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+
+<router-outlet></router-outlet>

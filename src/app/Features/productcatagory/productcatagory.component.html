@@ -1,0 +1,45 @@
+<div class="parent">
+    <div class="card">
+        <h3>Mobiles</h3>
+        <p>..........</p>
+        
+    </div>
+        
+        <div *ngFor="let div of divs; let i = index" class="card">
+            <h5>Product {{i + 1}}</h5>
+            <p>Category: {{div.category}}</p>
+          <i (click)="removeDiv(i)" class="fa-solid fa-ellipsis threedot"></i>
+        </div>
+
+
+</div>
+
+<div class="addproducttoggle" *ngIf="addproducttoggle">
+    <div class="formcontainer">
+        <form action="">
+            <h4>Enter the name of the Product :</h4>
+            <input name="addtoggle" [(ngModel)]="productobj.productname" type="text" >
+            <input type="hidden" [(ngModel)]="productobj.quantity" name="quantity">
+            <div class="addProduct">
+                <div  (click)="addDiv()" class=" btn button-88 addbtn">
+                    <p>Add +</p>
+                    
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="addProduct">
+    <div (click)="onadding()"  class=" btn button-88">
+        Add A new product +
+        
+    </div>
+    
+</div>
+
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<router-outlet></router-outlet>

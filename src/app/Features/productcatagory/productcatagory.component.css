@@ -1,0 +1,123 @@
+.parent {
+    padding: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+}
+
+.card {
+    flex: 1 1 300px; 
+    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 12px 20px rgba(0, 0, 0, 0.19); 
+    border-radius: 10px; 
+    background-color: #fff; 
+    text-align: center; 
+    max-width: 100%; 
+    box-sizing: border-box;
+    position: relative; 
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #242222; 
+}
+
+
+@media (max-width: 768px) {
+    .parent {
+        justify-content: center; 
+    }
+    
+    .card {
+        flex: 1 1 100%; 
+    }
+}
+
+
+
+/* CSS */
+.button-88 {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-88:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.button-88:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.btn{
+    margin-top: 10px;
+    margin-left: 650px;
+    text-align: center;
+    align-items: center;
+    width: 200px;
+}
+.threedot{
+    position: absolute;
+    top: 10px; 
+    top: 10px; 
+    right: 10px; 
+    font-size: 18px; 
+    cursor: pointer;
+    
+}
+
+.formcontainer {
+    background-color: white;
+    border-radius: 16px;
+    padding-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left:  50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 450px;
+    height: 200px;
+    padding:  30px 30px;
+    color: #242222;
+}
+.addbtn{
+    
+    border-radius:25px ;
+    width: 120px;
+    height: 40px;
+    color: black;
+    background-color: aquamarine;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 50px;
+    margin-left:  50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    justify-content: center;
+}
+.addbtn p{
+    padding-top: 5px;
+}
+.addbtn input{
+    width: 200px;
+    border-radius: 7px;
+    background-color: rgb(140, 131, 131);
+    color: black;
+}

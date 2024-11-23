@@ -1,0 +1,52 @@
+<!--  -->
+<div class="dashboardContainer">
+  <div class="dashboard-card">
+    <!-- Total Inventory -->
+    <div class="dashboard-section">
+      <h4>Total Inventory</h4>
+      @for (item of productList; track $index) {
+        
+      }
+      <p class="textp">{{ totalInventory }} items and {{ totalProducts }} products</p>
+    </div>
+  
+    <!-- Low Stock Alerts -->
+    <div class="dashboard-section collapsible">
+      <h4>Low Stock Alerts</h4>
+      <ul *ngFor="let item of productList">
+        @if(item.quantity <= 5 && item.quantity > 0){
+        <li class="textp" >{{ item.productname }} ({{ item.quantity }} remaining)</li>}
+      </ul>
+    </div>
+  
+    <!-- Out of Stock -->
+    <div class="dashboard-section collapsible">
+      <h4>Out of Stock</h4>
+      <ul *ngFor="let item of productList">
+        @if (item.quantity == 0) {
+        <li class="textp">{{ item.productname }}</li>}
+      </ul>
+    </div>
+  
+    <!-- Recent Activities -->
+    <div class="dashboard-section collapsible">
+      <h4>Recent Activities</h4>
+      <ul *ngFor="let activity of recentActivities">
+        <li class="textp">{{ activity.description }} on {{ activity.date }}</li>
+      </ul>
+    </div>
+  
+  
+    <!-- Performance Indicators -->
+    <div class="dashboard-section">
+      <h4>Performance Indicators</h4>
+      <p class="textp">Total Sold: {{ totalSale }} items</p>
+      <p class="textp">Restock Requirements: {{ restockRequirements }}</p>
+    </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+
+
+<router-outlet></router-outlet>

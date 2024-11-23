@@ -1,0 +1,137 @@
+/* General Card Styling */
+.dashboardContainer {
+  width: 80%;
+  justify-content: center;
+  font-size: 18px;
+  margin-left: 10%;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.dashboard-card {
+  width: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #ffffff; /* Set background to white */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  transition: transform 0.3s ease;
+}
+.dashboard-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Section Header Styling */
+.dashboard-section h4 {
+  font-size: 2rem;
+  color: #333; /* Black text */
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+/* Icon in Section Header */
+.dashboard-section h4::before {
+  content: "⬤";
+  font-size: 1.2rem;
+  margin-right: 8px;
+  color: #66bb6a; /* Green icon color */
+}
+
+/* Specific Section Colors */
+.dashboard-section:nth-child(1) h4::before { color: #66bb6a; } /* Total Inventory - Green */
+.dashboard-section:nth-child(2) h4::before { color: #ffa726; } /* Low Stock Alerts - Orange */
+.dashboard-section:nth-child(3) h4::before { color: #ef5350; } /* Out of Stock - Red */
+.dashboard-section:nth-child(4) h4::before { color: #42a5f5; } /* Recent Activities - Blue */
+.dashboard-section:nth-child(5) h4::before { color: #ab47bc; } /* Pending Actions - Purple */
+.dashboard-section:nth-child(6) h4::before { color: #8d6e63; } /* Performance Indicators - Brown */
+
+/* Collapsible Styling */
+.collapsible {
+  max-height: 150px; /* Adjusted to give more space */
+  overflow-y: auto;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 4px solid #e0e0e0;
+  margin-top: 5px;
+  transition: max-height 0.3s ease;
+}
+.collapsible:hover {
+  border-left-color: #66bb6a; /* Green effect on hover */
+}
+
+/* List and Text Styling */
+.dashboard-section ul {
+  padding-left: 20px;
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+.dashboard-section li {
+  background: #e8f5e9; /* Light green for list items */
+  margin: 3px 0;
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.dashboard-section li:hover {
+  background: #c8e6c9; /* Darker green on hover */
+}
+
+.dashboard-section p, .dashboard-section li {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #333; /* Black text */
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+
+.dashboard-section p {
+  font-weight: bold;
+  color: #333; /* Black text */
+}
+
+
+.dashboard-section {
+  padding: 20px; /* Increased padding for larger size */
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background-color: #ffffff; /* Set background to white */
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+.dashboard-section:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f0f4c3; /* Light green on hover */
+}
+
+/* Performance Indicator Special Styling */
+.dashboard-section:last-child {
+  background-color: #ede7f6; /* Light purple for the last section */
+  color: #7b1fa2;
+  font-size: 1rem;
+  border: 1px solid #d1c4e9;
+}
+
+/* Scrollbar Styling */
+.collapsible::-webkit-scrollbar {
+  width: 8px;
+}
+.collapsible::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.collapsible::-webkit-scrollbar-thumb {
+  background: #66bb6a; /* Green scrollbar thumb */
+  border-radius: 10px;
+}
+
+/* Increased Text Size for Inventory Summary */
+.dashboard-section .textp {
+  font-size: 1.2rem; /* Slightly larger text size */
+  font-weight: bold;
+  color: #333; /* Black text */
+}

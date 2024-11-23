@@ -1,0 +1,77 @@
+<div class="container">
+    <input type="radio" name="tab" id="tab1" checked>
+    <input type="radio" name="tab" id="tab2">
+    <input type="radio" name="tab" id="tab3">
+    
+    <div class="navbar">
+        <label for="tab1">Profile</label>
+        <label for="tab2">Account's Details</label>
+        <label for="tab3">Authentication</label>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="content-div" id="content1">
+            <div class="imagee">
+                <img class="imgg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXgBVKmJ9vU0MnmE9v5XoLoJNvOkI8Bpn1IQ&s" alt="Profile Picture">
+            </div>
+            <div *ngIf="userData" class="info">
+                <h2>Account Details</h2>
+                <p><strong>Username:</strong> {{ userData.username }}</p>
+                <p><strong>Email:</strong> {{ userData.email }}</p>
+                <p><strong>Phone:</strong> {{ userData.phone }}</p>
+              </div>
+              <button (click)="logout()" class="logout">Logout</button>
+        </div>
+        <div class="content-div" id="content2">
+            <div class="info">
+                <h5>UserName: {{ userData.username }}</h5>
+                <h5>Email: {{ userData.email }}</h5>
+                <h5>Phone: {{ userData.phone }}</h5>
+                <h5>Role: Inventory Manager</h5>
+                <p>Responsible for overseeing stock levels, orders, and supply chain logistics. Ensures timely restocking of inventory to maintain optimal levels and prevent shortages.</p>
+                
+                <h5>Warehouse Locations:</h5>
+                <ul>
+                    <li>Warehouse A: 123 Main St, City</li>
+                    <li>Warehouse B: 456 Second St, City</li>
+                </ul>
+                
+                <h5>Inventory Summary:</h5>
+                <p>Total Items: 1500</p>
+                <p>Low Stock Alerts: 20 Items</p>
+                <p>Recent Shipments: 5</p>
+        
+                <h5>Skills:</h5>
+                <ul>
+                    <li>Inventory Management Software (e.g., SAP, Oracle)</li>
+                    <li>Data Analysis and Reporting</li>
+                    <li>Supply Chain Logistics</li>
+                    <li>Team Leadership</li>
+                </ul>
+        
+                <h5>Recent Tasks:</h5>
+                <ul>
+                    <li>Implemented a new stock tracking system.</li>
+                    <li>Conducted an annual inventory audit.</li>
+                    <li>Optimized the reordering process based on usage trends.</li>
+                </ul>
+        
+                <div class="buttons">
+                    <button>Update Inventory</button>
+                    <button>Generate Report</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="content-div" id="content3">
+            <h3>Authentication Methods</h3>
+            <p><strong>Connected Accounts:</strong> Google, Facebook</p>
+            <p><strong>Recovery Email:</strong> recoveryema.com</p>
+            <p><strong>Security Questions:</strong> What is your mother's maiden name?</p>
+            <p><strong>Last Password Change:</strong> Oct 15, 2024</p>
+        </div>
+    </div>
+</div>
+
+    <br><br><br><br>
